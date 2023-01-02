@@ -17,10 +17,10 @@ public final class VisitorHomeAUTH implements Visitor {
     /**
      * Visitor executes the on page and change page commands specific
      * to the authenticated home page
-     * @param currentPage current page
-     * @param action action
-     * @param db database
-     * @param output output
+     * @param currentPage
+     * @param action
+     * @param db
+     * @param output
      */
     public void visit(final CurrentPage currentPage, final Action action,
                       final Database db, final ArrayNode output) {
@@ -52,7 +52,10 @@ public final class VisitorHomeAUTH implements Visitor {
                     output.addPOJO(err);
                     break;
                 }
-                currentPage.resetUpgrades();
+                if (action.getPage().equals("upgrades")) {
+                    currentPage.resetUpgrades();
+                    break;
+                }
             }
             case "on page" -> {
                 ErrorMessage err = ErrorFactory.standardErr();

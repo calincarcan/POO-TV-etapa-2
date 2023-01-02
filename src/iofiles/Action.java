@@ -15,4 +15,5 @@ public final class Action {
     private String count;
     private int rate;
     private Filters filters;
+    private String subscribedGenre;
 }

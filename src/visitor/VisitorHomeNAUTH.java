@@ -62,16 +62,17 @@ public final class VisitorHomeNAUTH implements Visitor {
                         output.addPOJO(err);
                         currentPage.resetHomeNAUTH();
                         break;
-                    }
-                    currentPage.resetHomeAUTH();
-                    db.setCurrUser(foundUser);
+                    } else {
+                        currentPage.resetHomeAUTH();
+                        db.setCurrUser(foundUser);
 
-                    User errUser = UserFactory.createUser(foundUser);
-                    db.setCurrMovies(CountryFilter
-                            .moviePerms(foundUser.getCredentials().getCountry(), db));
-                    ErrorMessage err = ErrorFactory.createErr(null, new ArrayList<>(), errUser);
-                    output.addPOJO(err);
-                    break;
+                        User errUser = UserFactory.createUser(foundUser);
+                        db.setCurrMovies(CountryFilter
+                                .moviePerms(foundUser.getCredentials().getCountry(), db));
+                        ErrorMessage err = ErrorFactory.createErr(null, new ArrayList<>(), errUser);
+                        output.addPOJO(err);
+                        break;
+                    }
                 }
                 if (action.getFeature().equals("register")) {
                     if (!action.getFeature().equals("register")) {

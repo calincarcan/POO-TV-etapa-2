@@ -29,6 +29,7 @@ public final class VisitorSeeDetails implements Visitor {
         switch (actionType) {
             case "change page" -> {
                 if (!action.getPage().equals("movies")
+                        && !action.getPage().equals("subscribe")
                         && !action.getPage().equals("home")
                         && !action.getPage().equals("upgrades")
                         && !action.getPage().equals("logout")) {
@@ -61,7 +62,22 @@ public final class VisitorSeeDetails implements Visitor {
                             .createErr(null, list, user);
                     output.addPOJO(err);
                 }
-
+                if (action.getPage().equals("upgrades")) {
+                    currentPage.resetUpgrades();
+                    break;
+                }
+                if (action.getPage().equals("subscribe")) {
+                    ArrayList<String> currMovieGenres = db.getCurrMovies().get(0).getGenres();
+                    ArrayList<String> currUserGenres = db.getCurrUser().getSubscribedGenres();
+                    if (!currMovieGenres.contains(action.getSubscribedGenre())
+                            || currUserGenres.contains(action.getSubscribedGenre())) {
+                        ErrorMessage err = ErrorFactory.standardErr();
+                        output.addPOJO(err);
+                        break;
+                    }
+                    db.getCurrUser().getSubscribedGenres().add(action.getSubscribedGenre());
+                    break;
+                }
             }
             case "on page" -> {
                 final int MIN_RATING = 1;
@@ -200,6 +216,7 @@ public final class VisitorSeeDetails implements Visitor {
                     list.add(MovieFactory.createMovie(ratedMovie));
                     ErrorMessage err = ErrorFactory.createErr(null, list, user);
                     output.addPOJO(err);
+                    break;
                 }
             }
             default -> {
