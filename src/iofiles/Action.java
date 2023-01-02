@@ -16,4 +16,6 @@ public final class Action {
     private int rate;
     private Filters filters;
     private String subscribedGenre;
+    private String deletedMovie;
+    private Movieio addedMovie;
 }

@@ -1,6 +1,7 @@
 package factory;
 
 import data.Movie;
+import data.Notification;
 import data.User;
 import iofiles.Credentials;
 import iofiles.Userio;
@@ -38,6 +39,18 @@ public final class UserFactory {
             auxList.add(MovieFactory.createMovie(movie));
         }
         copyUser.setRatedMovies(auxList);
+        // Notification list copy
+        ArrayList<Notification> notList = new ArrayList<>();
+        for (Notification notification : user.getNotifications()) {
+            notList.add(new Notification(notification.getMovieName(), notification.getMessage()));
+        }
+        copyUser.setNotifications(notList);
+        // Subscriptions list copy
+        ArrayList<String> genreList = new ArrayList<>();
+        for (String genre : user.getSubscribedGenres()) {
+            genreList.add(genre);
+        }
+        copyUser.setSubscribedGenres(genreList);
         return copyUser;
     }
 
@@ -55,6 +68,8 @@ public final class UserFactory {
         newUser.setWatchedMovies(new ArrayList<>());
         newUser.setLikedMovies(new ArrayList<>());
         newUser.setRatedMovies(new ArrayList<>());
+        newUser.setNotifications(new ArrayList<>());
+        newUser.setSubscribedGenres(new ArrayList<>());
         return newUser;
     }
 
@@ -72,6 +87,8 @@ public final class UserFactory {
         newUser.setWatchedMovies(new ArrayList<>());
         newUser.setLikedMovies(new ArrayList<>());
         newUser.setRatedMovies(new ArrayList<>());
+        newUser.setNotifications(new ArrayList<>());
+        newUser.setSubscribedGenres(new ArrayList<>());
         return newUser;
     }
     private UserFactory() {

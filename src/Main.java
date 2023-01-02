@@ -1,5 +1,8 @@
 import data.CurrentPage;
 import data.Database;
+import data.ErrorMessage;
+import data.Movie;
+import factory.ErrorFactory;
 import factory.VisitorFactory;
 
 import factory.MovieFactory;
@@ -17,6 +20,8 @@ import java.io.File;
 import java.io.IOException;
 
 public final class Main {
+    static int nrTest = 1;
+
     public static void main(String[] args) throws IOException {
         String inPath = args[0];
         String outPath = args[1];
@@ -34,19 +39,43 @@ public final class Main {
         currentPage.getVisitorColl().put("upgrades", VisitorFactory.createVisitor("upgrades"));
         // Database populated
         Database database = new Database();
-        for (Userio user: inputData.getUsers()) {
+        for (Userio user : inputData.getUsers()) {
             database.getUsers().add(UserFactory.createUser(user));
         }
-        for (Movieio movie: inputData.getMovies()) {
+        for (Movieio movie : inputData.getMovies()) {
             database.getMovies().add(MovieFactory.createMovie(movie));
         }
         database.setActions(inputData.getActions());
         for (Action action : database.getActions()) {
-            Visitor visitor = currentPage.getVisitorColl().get(currentPage.getCurrentVisitor());
-            currentPage.accept(visitor, action, database, output);
+            if (!action.getType().equals("database")) {
+                Visitor visitor = currentPage.getVisitorColl().get(currentPage.getCurrentVisitor());
+                currentPage.accept(visitor, action, database, output);
+            } else {
+                switch (action.getFeature()) {
+                    case "add" -> {
+                        if (database.findMovie(action.getAddedMovie().getName())) {
+                            ErrorMessage err = ErrorFactory.standardErr();
+                            output.addPOJO(err);
+                            break;
+                        } else {
+                            Movie movie = MovieFactory.createMovie(action.getAddedMovie());
+                            database.getMovies().add(movie);
+                            database.notifyUsersADD(movie);
+                        }
+                    }
+                    case "delete" -> {
+                        // TODO: implement the delete
+                    }
+                    default -> {
+                        ErrorMessage err = ErrorFactory.standardErr();
+                        output.addPOJO(err);
+                    }
+                }
+            }
         }
         // Output data finished
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(outPath), output);
+        objectWriter.writeValue(new File("checker/resources/out/out_" + nrTest++ + ".json"), output);
     }
 }

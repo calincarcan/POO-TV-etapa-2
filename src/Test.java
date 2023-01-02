@@ -1,4 +1,4 @@
-import checker.Checkstyle;
+import checker.*;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
