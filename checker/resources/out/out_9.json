@@ -15,8 +15,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -205,8 +204,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -235,8 +233,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -275,8 +272,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -325,8 +321,7 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -385,8 +380,7 @@
       "rating" : 2.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -459,8 +453,7 @@
       "rating" : 2.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -539,8 +532,7 @@
       "rating" : 2.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -629,8 +621,7 @@
       "rating" : 2.0,
       "numRatings" : 2
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -733,8 +724,7 @@
       "rating" : 2.0,
       "numRatings" : 2
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -843,8 +833,7 @@
       "rating" : 2.0,
       "numRatings" : 2
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -963,8 +952,7 @@
       "rating" : 2.0,
       "numRatings" : 3
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -1097,8 +1085,7 @@
       "rating" : 2.0,
       "numRatings" : 3
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1237,8 +1224,7 @@
       "rating" : 2.0,
       "numRatings" : 3
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1387,8 +1373,7 @@
       "rating" : 2.0,
       "numRatings" : 4
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -1551,8 +1536,7 @@
       "rating" : 2.0,
       "numRatings" : 4
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1721,8 +1705,7 @@
       "rating" : 2.0,
       "numRatings" : 4
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1901,8 +1884,7 @@
       "rating" : 2.0,
       "numRatings" : 5
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -2095,8 +2077,7 @@
       "rating" : 2.0,
       "numRatings" : 5
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -2295,8 +2276,7 @@
       "rating" : 2.0,
       "numRatings" : 5
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -2505,8 +2485,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -2729,8 +2708,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -2959,8 +2937,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -3357,8 +3334,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -3587,8 +3563,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -3827,8 +3802,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -4077,8 +4051,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -4345,8 +4318,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -4615,8 +4587,7 @@
       "rating" : 2.0,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -4895,8 +4866,7 @@
       "rating" : 3.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -5189,8 +5159,7 @@
       "rating" : 3.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -5489,8 +5458,7 @@
       "rating" : 3.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -5799,8 +5767,7 @@
       "rating" : 4.0,
       "numRatings" : 2
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -6123,8 +6090,7 @@
       "rating" : 4.0,
       "numRatings" : 2
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -6453,8 +6419,7 @@
       "rating" : 4.0,
       "numRatings" : 2
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -6793,8 +6758,7 @@
       "rating" : 3.6666666666666665,
       "numRatings" : 3
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -7147,8 +7111,7 @@
       "rating" : 3.6666666666666665,
       "numRatings" : 3
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -7507,8 +7470,7 @@
       "rating" : 3.6666666666666665,
       "numRatings" : 3
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -7877,8 +7839,7 @@
       "rating" : 3.25,
       "numRatings" : 4
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -8261,8 +8222,7 @@
       "rating" : 3.25,
       "numRatings" : 4
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -8651,8 +8611,7 @@
       "rating" : 3.25,
       "numRatings" : 4
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -9051,8 +9010,7 @@
       "rating" : 2.8,
       "numRatings" : 5
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -9465,8 +9423,7 @@
       "rating" : 2.8,
       "numRatings" : 5
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -9885,8 +9842,7 @@
       "rating" : 2.8,
       "numRatings" : 5
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -10315,8 +10271,7 @@
       "rating" : 2.6666666666666665,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -10759,8 +10714,7 @@
       "rating" : 2.6666666666666665,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -11209,8 +11163,7 @@
       "rating" : 2.6666666666666665,
       "numRatings" : 6
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -11669,8 +11622,7 @@
       "rating" : 3.0,
       "numRatings" : 7
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -12143,8 +12095,7 @@
       "rating" : 3.0,
       "numRatings" : 7
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -12623,8 +12574,7 @@
       "rating" : 3.0,
       "numRatings" : 7
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -13113,8 +13063,7 @@
       "rating" : 3.125,
       "numRatings" : 8
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -13617,8 +13566,7 @@
       "rating" : 3.125,
       "numRatings" : 8
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -14127,8 +14075,7 @@
       "rating" : 3.125,
       "numRatings" : 8
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -14647,8 +14594,7 @@
       "rating" : 3.0,
       "numRatings" : 9
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -15181,8 +15127,7 @@
       "rating" : 3.0,
       "numRatings" : 9
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -15721,8 +15666,7 @@
       "rating" : 3.0,
       "numRatings" : 9
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",

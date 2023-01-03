@@ -18,6 +18,7 @@ import iofiles.Userio;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public final class Main {
     static int nrTest = 1;
@@ -47,16 +48,19 @@ public final class Main {
         }
         database.setActions(inputData.getActions());
         for (Action action : database.getActions()) {
-            if (!action.getType().equals("database")) {
+            if (!action.getType().equals("database") && !action.getType().equals("back")) {
                 Visitor visitor = currentPage.getVisitorColl().get(currentPage.getCurrentVisitor());
                 currentPage.accept(visitor, action, database, output);
             } else {
+                if (action.getType().equals("back")) {
+
+                    continue;
+                }
                 switch (action.getFeature()) {
                     case "add" -> {
-                        if (database.findMovie(action.getAddedMovie().getName())) {
+                        if (database.findMovie(action.getAddedMovie().getName()) == null) {
                             ErrorMessage err = ErrorFactory.standardErr();
                             output.addPOJO(err);
-                            break;
                         } else {
                             Movie movie = MovieFactory.createMovie(action.getAddedMovie());
                             database.getMovies().add(movie);
@@ -64,7 +68,14 @@ public final class Main {
                         }
                     }
                     case "delete" -> {
-                        // TODO: implement the delete
+                        Movie movie = database.findMovie(action.getAddedMovie().getName());
+                        if (movie == null) {
+                            ErrorMessage err = ErrorFactory.standardErr();
+                            output.addPOJO(err);
+                        } else {
+                            database.notifyUsersDELETE(movie);
+                            database.deleteMovie(movie);
+                        }
                     }
                     default -> {
                         ErrorMessage err = ErrorFactory.standardErr();

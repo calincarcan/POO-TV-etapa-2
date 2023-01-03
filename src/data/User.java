@@ -1,5 +1,6 @@
 package data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import iofiles.Credentials;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,5 +18,6 @@ public class User {
     private ArrayList<Movie> likedMovies;
     private ArrayList<Movie> ratedMovies;
     private ArrayList<Notification> notifications;
+    @JsonIgnore
     private ArrayList<String> subscribedGenres;
 }

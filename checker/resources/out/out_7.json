@@ -19,8 +19,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -67,8 +66,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -87,8 +85,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -127,8 +124,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -151,8 +147,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -191,8 +186,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -229,8 +223,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -269,8 +262,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -319,8 +311,7 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -379,8 +370,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -404,6 +394,16 @@
     "numLikes" : 1,
     "rating" : 0.0,
     "numRatings" : 0
+  }, {
+    "name" : "Matrix 2",
+    "year" : 1998,
+    "duration" : 131,
+    "genres" : [ "Action", "Comedy", "Crime" ],
+    "actors" : [ "Laurence Fishburne", "Halle Berry", "Keanu Reeves" ],
+    "countriesBanned" : [ "Ukraine" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
   } ],
   "currentUser" : {
     "credentials" : {
@@ -449,8 +449,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -509,8 +508,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",

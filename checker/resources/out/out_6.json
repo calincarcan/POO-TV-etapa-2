@@ -15,8 +15,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -39,8 +38,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -59,8 +57,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",

@@ -15,8 +15,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -175,8 +174,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -215,8 +213,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -245,8 +242,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -285,8 +281,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -335,8 +330,7 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -395,8 +389,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -415,8 +408,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -495,8 +487,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -525,8 +516,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -565,8 +555,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -615,8 +604,7 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -675,8 +663,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -745,8 +732,7 @@
       "rating" : 3.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -765,9 +751,12 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
 }, {
   "error" : null,
   "currentMoviesList" : [ {
@@ -945,8 +934,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -975,8 +963,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1015,8 +1002,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1065,8 +1051,7 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1125,8 +1110,7 @@
       "rating" : 5.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1335,8 +1319,7 @@
       "rating" : 5.0,
       "numRatings" : 1
     } ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -1401,8 +1384,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1591,8 +1573,7 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -1781,7 +1762,6 @@
       "numRatings" : 0
     } ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 } ]

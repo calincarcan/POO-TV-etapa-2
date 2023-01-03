@@ -27,8 +27,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -217,8 +216,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -247,8 +245,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -287,8 +284,7 @@
     "watchedMovies" : [ ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : null,
@@ -337,8 +333,7 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 }, {
   "error" : "Error",
@@ -520,6 +515,36 @@
     "numLikes" : 0,
     "rating" : 0.0,
     "numRatings" : 0
+  }, {
+    "name" : "The Shawshank Redemption",
+    "year" : 1994,
+    "duration" : 166,
+    "genres" : [ "Drama", "Thriller" ],
+    "actors" : [ "Tim Robbins", "Morgan Freeman", "Bob Gunton", "William Sadler" ],
+    "countriesBanned" : [ "Azerbaijan", "China", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "The Dark Knight",
+    "year" : 2008,
+    "duration" : 166,
+    "genres" : [ "Action", "Mistery", "Thriller" ],
+    "actors" : [ "Morgan Freeman", "Christian Bale", "Heath Ledger", "Michael Caine" ],
+    "countriesBanned" : [ "Azerbaijan", "China", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
+  }, {
+    "name" : "Pulp Fictiom",
+    "year" : 1994,
+    "duration" : 166,
+    "genres" : [ "Crime", "Drama", "Thriller" ],
+    "actors" : [ "John Travolta", "Uma Thurman", "Samuel L. Jackson", "Bruce Willis" ],
+    "countriesBanned" : [ "Azerbaijan", "China", "India" ],
+    "numLikes" : 0,
+    "rating" : 0.0,
+    "numRatings" : 0
   } ],
   "currentUser" : {
     "credentials" : {
@@ -555,7 +580,6 @@
     } ],
     "likedMovies" : [ ],
     "ratedMovies" : [ ],
-    "notifications" : null,
-    "subscribedGenres" : null
+    "notifications" : [ ]
   }
 } ]
