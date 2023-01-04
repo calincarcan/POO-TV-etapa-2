@@ -28,7 +28,12 @@ public final class ErrorFactory {
                                          final ArrayList<Movie> list, final User currentUser) {
         ErrorMessage err = new ErrorMessage();
         err.setError(error);
-        ArrayList<Movie> newList = new ArrayList<>(list);
+        ArrayList<Movie> newList;
+        if (list != null) {
+            newList = new ArrayList<>(list);
+        } else {
+            newList = null;
+        }
         err.setCurrentMoviesList(newList);
         err.setCurrentUser(currentUser);
         return err;

@@ -16,6 +16,7 @@ import iofiles.Userio;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public final class Main {
     static int nrTest = 1;
@@ -101,6 +102,19 @@ public final class Main {
                 }
             }
         }
+
+        if (database.getCurrUser() != null) {
+            if (database.getCurrUser().getCredentials().getAccountType().equals("premium")) {
+                String recMovieName = database.getRecommendation();
+                Notification recommendation;
+                recommendation = new Notification(Objects
+                        .requireNonNullElse(recMovieName, "No recommendation"), "Recommendation");
+                database.getCurrUser().getNotifications().add(recommendation);
+                ErrorMessage err = ErrorFactory.createErr(null, null, database.getCurrUser());
+                output.addPOJO(err);
+            }
+        }
+
         // Output data finished
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(outPath), output);

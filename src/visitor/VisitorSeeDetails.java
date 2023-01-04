@@ -181,6 +181,13 @@ public final class VisitorSeeDetails implements Visitor {
 
                     if (!user.getLikedMovies().contains(likedMovie)) {
                         user.getLikedMovies().add(likedMovie);
+                        for (String genre : likedMovie.getGenres()) {
+                            if (user.getLikeMap().containsKey(genre)) {
+                                user.getLikeMap().put(genre, user.getLikeMap().get(genre) + 1);
+                            } else {
+                                user.getLikeMap().put(genre, 1);
+                            }
+                        }
                         likedMovie.setNumLikes(likedMovie.getNumLikes() + 1);
                     }
 

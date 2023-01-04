@@ -1,11 +1,14 @@
 package data;
 
+import filters.CountryFilter;
 import iofiles.Action;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.ArrayList;
-import java.util.Stack;
+import java.security.PrivilegedAction;
+import java.util.*;
+import java.util.function.Consumer;
 
 @Setter
 @Getter
@@ -16,6 +19,23 @@ public class Database {
     private User currUser;
     private ArrayList<Movie> currMovies;
     private Stack<ChangePageCommand> undoStack;
+
+    public String getRecommendation() {
+        ArrayList<String> genres = new ArrayList<>();
+        currUser.getLikeMap().entrySet().stream().sorted(Map.Entry.comparingByValue())
+                .forEach(stringIntegerEntry -> genres.add(stringIntegerEntry.getKey()));
+        Collections.reverse(genres);
+        movies.sort(Comparator.comparingInt(Movie::getNumLikes));
+        currMovies = CountryFilter.moviePerms(currUser.getCredentials().getCountry(), this);
+
+        for (String genre : genres) {
+            for (Movie movie : movies) {
+                if (movie.getGenres().contains(genre) && !currUser.getWatchedMovies().contains(movie))
+                    return movie.getName();
+            }
+        }
+        return null;
+    }
 
     /**
      * Method adds a notifications to all the users subscribed to the genres of

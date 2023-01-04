@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 @Setter
 @Getter
@@ -20,5 +21,7 @@ public class User {
     private ArrayList<Notification> notifications;
     @JsonIgnore
     private ArrayList<String> subscribedGenres;
+    @JsonIgnore
+    private HashMap<String, Integer> likeMap = new HashMap<>();
 
 }
