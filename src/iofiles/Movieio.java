@@ -8,7 +8,7 @@ import java.util.ArrayList;
 @Setter
 public final class Movieio {
     private String name;
-    private int year;
+    private String year;
     private int duration;
     private ArrayList<String> genres;
     private ArrayList<String> actors;

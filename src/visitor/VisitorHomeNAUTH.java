@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import iofiles.Action;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 public final class VisitorHomeNAUTH implements Visitor {
     /**
@@ -63,6 +64,8 @@ public final class VisitorHomeNAUTH implements Visitor {
                         currentPage.resetHomeNAUTH();
                         break;
                     } else {
+                        db.setUndoStack(new Stack<>());
+
                         currentPage.resetHomeAUTH();
                         db.setCurrUser(foundUser);
 
@@ -81,6 +84,8 @@ public final class VisitorHomeNAUTH implements Visitor {
                         currentPage.resetHomeNAUTH();
                         break;
                     }
+                    db.setUndoStack(new Stack<>());
+
                     User newUser = UserFactory.createUser(action.getCredentials());
                     db.getUsers().add(newUser);
 

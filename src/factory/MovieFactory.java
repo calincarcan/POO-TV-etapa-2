@@ -3,6 +3,8 @@ package factory;
 import data.Movie;
 import iofiles.Movieio;
 
+import java.util.HashMap;
+
 public final class MovieFactory {
     /**
      * Method creates a copy of a Movie object given a Movie object
@@ -44,6 +46,7 @@ public final class MovieFactory {
         newMovie.setNumLikes(0);
         newMovie.setRating(0);
         newMovie.setNumRatings(0);
+        newMovie.setRatingMap(new HashMap<>());
         return newMovie;
     }
     private MovieFactory() {

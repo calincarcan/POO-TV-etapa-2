@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.Stack;
 
 @Setter
 @Getter
@@ -14,6 +15,7 @@ public class Database {
     private ArrayList<Action> actions;
     private User currUser;
     private ArrayList<Movie> currMovies;
+    private Stack<ChangePageCommand> undoStack;
 
     /**
      * Method adds a notifications to all the users subscribed to the genres of
@@ -65,11 +67,12 @@ public class Database {
         for (User user : users) {
             user.getPurchasedMovies().remove(movie);
             user.getWatchedMovies().remove(movie);
-            user.getRatedMovies().remove(movie);
             user.getLikedMovies().remove(movie);
+            user.getRatedMovies().remove(movie);
         }
         movies.remove(movie);
     }
+
     /**
      * Method returns a reference to the movie with the specified name
      *
@@ -93,6 +96,7 @@ public class Database {
         movies = new ArrayList<>();
         actions = new ArrayList<>();
         currMovies = new ArrayList<>();
+        undoStack = new Stack<>();
         currUser = null;
     }
 }

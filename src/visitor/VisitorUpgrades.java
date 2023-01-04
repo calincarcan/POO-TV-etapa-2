@@ -1,10 +1,6 @@
 package visitor;
 
-import data.Database;
-import data.User;
-import data.CurrentPage;
-import data.Movie;
-import data.ErrorMessage;
+import data.*;
 import factory.ErrorFactory;
 import factory.MovieFactory;
 import factory.UserFactory;
@@ -29,19 +25,14 @@ public final class VisitorUpgrades implements Visitor {
         switch (actionType) {
             case "change page" -> {
                 if (!action.getPage().equals("movies")
-                        && !action.getPage().equals("home")
                         && !action.getPage().equals("logout")) {
                     ErrorMessage err = ErrorFactory.standardErr();
                     output.addPOJO(err);
                     break;
                 }
-                if (action.getPage().equals("home")) {
-                    db.setCurrMovies(CountryFilter
-                            .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
-                    currentPage.resetHomeAUTH();
-                    break;
-                }
                 if (action.getPage().equals("movies")) {
+                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
                     db.setCurrMovies(CountryFilter
                             .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     currentPage.resetMovies();

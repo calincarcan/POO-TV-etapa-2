@@ -20,4 +20,5 @@ public class User {
     private ArrayList<Notification> notifications;
     @JsonIgnore
     private ArrayList<String> subscribedGenres;
+
 }

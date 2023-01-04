@@ -21,7 +21,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -31,7 +31,7 @@
     "numRatings" : 0
   }, {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -41,7 +41,7 @@
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 82,
     "genres" : [ "Western", "Mystery", "Romance" ],
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
@@ -51,7 +51,7 @@
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 128,
     "genres" : [ "Horror", "Action", "Thriller" ],
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
@@ -61,7 +61,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -71,7 +71,7 @@
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 103,
     "genres" : [ "Drama", "Mystery", "Western" ],
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
@@ -81,7 +81,7 @@
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
-    "year" : 2000,
+    "year" : "2000",
     "duration" : 91,
     "genres" : [ "Mystery", "Horror", "Western" ],
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
@@ -91,7 +91,7 @@
     "numRatings" : 0
   }, {
     "name" : "Bag It",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 149,
     "genres" : [ "Drama", "Horror", "Fantasy" ],
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
@@ -101,7 +101,7 @@
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
-    "year" : 1987,
+    "year" : "1987",
     "duration" : 135,
     "genres" : [ "Horror", "Western", "Drama" ],
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
@@ -111,7 +111,7 @@
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
-    "year" : 1988,
+    "year" : "1988",
     "duration" : 178,
     "genres" : [ "Drama", "Comedy", "Fantasy" ],
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
@@ -121,7 +121,7 @@
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 79,
     "genres" : [ "Mystery", "Fantasy", "Drama" ],
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
@@ -131,7 +131,7 @@
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 155,
     "genres" : [ "Comedy", "Thriller", "Horror" ],
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
@@ -141,7 +141,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -151,7 +151,7 @@
     "numRatings" : 0
   }, {
     "name" : "Mistress",
-    "year" : 2012,
+    "year" : "2012",
     "duration" : 146,
     "genres" : [ "Thriller", "Drama", "Fantasy" ],
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
@@ -180,7 +180,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -190,7 +190,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -219,7 +219,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -248,7 +248,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -269,7 +269,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -287,7 +287,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -308,7 +308,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -319,7 +319,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -336,7 +336,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -357,7 +357,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -368,7 +368,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -379,7 +379,7 @@
     } ],
     "likedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -414,7 +414,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -424,7 +424,7 @@
     "numRatings" : 0
   }, {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -434,7 +434,7 @@
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 128,
     "genres" : [ "Horror", "Action", "Thriller" ],
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
@@ -444,7 +444,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -454,7 +454,7 @@
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 79,
     "genres" : [ "Mystery", "Fantasy", "Drama" ],
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
@@ -464,7 +464,7 @@
     "numRatings" : 0
   }, {
     "name" : "Mistress",
-    "year" : 2012,
+    "year" : "2012",
     "duration" : 146,
     "genres" : [ "Thriller", "Drama", "Fantasy" ],
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
@@ -493,7 +493,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -522,7 +522,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -543,7 +543,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -561,7 +561,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -582,7 +582,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -593,7 +593,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -610,7 +610,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -631,7 +631,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -642,7 +642,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -653,7 +653,7 @@
     } ],
     "likedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -669,7 +669,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -690,7 +690,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -701,7 +701,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -712,7 +712,7 @@
     } ],
     "likedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -723,7 +723,7 @@
     } ],
     "ratedMovies" : [ {
       "name" : "My Sassy Girl",
-      "year" : 2005,
+      "year" : "2005",
       "duration" : 125,
       "genres" : [ "Comedy", "Mystery", "Fantasy" ],
       "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -761,7 +761,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -771,7 +771,7 @@
     "numRatings" : 0
   }, {
     "name" : "Take the Money and Run",
-    "year" : 2006,
+    "year" : "2006",
     "duration" : 134,
     "genres" : [ "Thriller", "Western", "Mystery" ],
     "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
@@ -781,7 +781,7 @@
     "numRatings" : 0
   }, {
     "name" : "Penelope",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 166,
     "genres" : [ "Fantasy", "Drama", "Thriller" ],
     "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
@@ -791,7 +791,7 @@
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 82,
     "genres" : [ "Western", "Mystery", "Romance" ],
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
@@ -801,7 +801,7 @@
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 128,
     "genres" : [ "Horror", "Action", "Thriller" ],
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
@@ -811,7 +811,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -821,7 +821,7 @@
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 103,
     "genres" : [ "Drama", "Mystery", "Western" ],
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
@@ -831,7 +831,7 @@
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
-    "year" : 2000,
+    "year" : "2000",
     "duration" : 91,
     "genres" : [ "Mystery", "Horror", "Western" ],
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
@@ -841,7 +841,7 @@
     "numRatings" : 0
   }, {
     "name" : "Bag It",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 149,
     "genres" : [ "Drama", "Horror", "Fantasy" ],
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
@@ -851,7 +851,7 @@
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
-    "year" : 1987,
+    "year" : "1987",
     "duration" : 135,
     "genres" : [ "Horror", "Western", "Drama" ],
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
@@ -861,7 +861,7 @@
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
-    "year" : 1988,
+    "year" : "1988",
     "duration" : 178,
     "genres" : [ "Drama", "Comedy", "Fantasy" ],
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
@@ -871,7 +871,7 @@
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 79,
     "genres" : [ "Mystery", "Fantasy", "Drama" ],
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
@@ -881,7 +881,7 @@
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 155,
     "genres" : [ "Comedy", "Thriller", "Horror" ],
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
@@ -891,7 +891,7 @@
     "numRatings" : 0
   }, {
     "name" : "As You Like It",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 91,
     "genres" : [ "Romance", "Horror", "Thriller" ],
     "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
@@ -901,7 +901,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -911,7 +911,7 @@
     "numRatings" : 0
   }, {
     "name" : "Mistress",
-    "year" : 2012,
+    "year" : "2012",
     "duration" : 146,
     "genres" : [ "Thriller", "Drama", "Fantasy" ],
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
@@ -940,7 +940,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -969,7 +969,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -990,7 +990,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1008,7 +1008,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1029,7 +1029,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1040,7 +1040,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1057,7 +1057,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1078,7 +1078,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1089,7 +1089,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1101,7 +1101,7 @@
     "likedMovies" : [ ],
     "ratedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1116,7 +1116,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1126,7 +1126,7 @@
     "numRatings" : 1
   }, {
     "name" : "Take the Money and Run",
-    "year" : 2006,
+    "year" : "2006",
     "duration" : 134,
     "genres" : [ "Thriller", "Western", "Mystery" ],
     "actors" : [ "Hailey Evequot", "Fenelia Maryott", "Gloriane Haughton", "Evvie Asbery" ],
@@ -1136,7 +1136,7 @@
     "numRatings" : 0
   }, {
     "name" : "Penelope",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 166,
     "genres" : [ "Fantasy", "Drama", "Thriller" ],
     "actors" : [ "Elnore Neild", "Gay Cobbing", "Guntar Holton", "Merry Troni" ],
@@ -1146,7 +1146,7 @@
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 82,
     "genres" : [ "Western", "Mystery", "Romance" ],
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
@@ -1156,7 +1156,7 @@
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 128,
     "genres" : [ "Horror", "Action", "Thriller" ],
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
@@ -1166,7 +1166,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -1176,7 +1176,7 @@
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 103,
     "genres" : [ "Drama", "Mystery", "Western" ],
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
@@ -1186,7 +1186,7 @@
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
-    "year" : 2000,
+    "year" : "2000",
     "duration" : 91,
     "genres" : [ "Mystery", "Horror", "Western" ],
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
@@ -1196,7 +1196,7 @@
     "numRatings" : 0
   }, {
     "name" : "Bag It",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 149,
     "genres" : [ "Drama", "Horror", "Fantasy" ],
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
@@ -1206,7 +1206,7 @@
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
-    "year" : 1987,
+    "year" : "1987",
     "duration" : 135,
     "genres" : [ "Horror", "Western", "Drama" ],
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
@@ -1216,7 +1216,7 @@
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
-    "year" : 1988,
+    "year" : "1988",
     "duration" : 178,
     "genres" : [ "Drama", "Comedy", "Fantasy" ],
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
@@ -1226,7 +1226,7 @@
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 79,
     "genres" : [ "Mystery", "Fantasy", "Drama" ],
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
@@ -1236,7 +1236,7 @@
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 155,
     "genres" : [ "Comedy", "Thriller", "Horror" ],
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
@@ -1246,7 +1246,7 @@
     "numRatings" : 0
   }, {
     "name" : "As You Like It",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 91,
     "genres" : [ "Romance", "Horror", "Thriller" ],
     "actors" : [ "Maureene Elks", "Amber McGilbon", "Lora Doelle", "Blondelle Spyvye" ],
@@ -1256,7 +1256,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1266,7 +1266,7 @@
     "numRatings" : 0
   }, {
     "name" : "Mistress",
-    "year" : 2012,
+    "year" : "2012",
     "duration" : 146,
     "genres" : [ "Thriller", "Drama", "Fantasy" ],
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
@@ -1287,7 +1287,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1298,7 +1298,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1310,7 +1310,7 @@
     "likedMovies" : [ ],
     "ratedMovies" : [ {
       "name" : "Lord, Save Us from Your Followers",
-      "year" : 1998,
+      "year" : "1998",
       "duration" : 125,
       "genres" : [ "Comedy", "Western", "Mystery" ],
       "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1352,7 +1352,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1363,7 +1363,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1374,7 +1374,7 @@
     } ],
     "likedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1390,7 +1390,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1400,7 +1400,7 @@
     "numRatings" : 1
   }, {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -1410,7 +1410,7 @@
     "numRatings" : 1
   }, {
     "name" : "Kiwi!",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 82,
     "genres" : [ "Western", "Mystery", "Romance" ],
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
@@ -1420,7 +1420,7 @@
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 128,
     "genres" : [ "Horror", "Action", "Thriller" ],
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
@@ -1430,7 +1430,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -1440,7 +1440,7 @@
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 103,
     "genres" : [ "Drama", "Mystery", "Western" ],
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
@@ -1450,7 +1450,7 @@
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
-    "year" : 2000,
+    "year" : "2000",
     "duration" : 91,
     "genres" : [ "Mystery", "Horror", "Western" ],
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
@@ -1460,7 +1460,7 @@
     "numRatings" : 0
   }, {
     "name" : "Bag It",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 149,
     "genres" : [ "Drama", "Horror", "Fantasy" ],
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
@@ -1470,7 +1470,7 @@
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
-    "year" : 1987,
+    "year" : "1987",
     "duration" : 135,
     "genres" : [ "Horror", "Western", "Drama" ],
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
@@ -1480,7 +1480,7 @@
     "numRatings" : 0
   }, {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
-    "year" : 1988,
+    "year" : "1988",
     "duration" : 178,
     "genres" : [ "Drama", "Comedy", "Fantasy" ],
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
@@ -1490,7 +1490,7 @@
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 79,
     "genres" : [ "Mystery", "Fantasy", "Drama" ],
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
@@ -1500,7 +1500,7 @@
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 155,
     "genres" : [ "Comedy", "Thriller", "Horror" ],
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
@@ -1510,7 +1510,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1520,7 +1520,7 @@
     "numRatings" : 0
   }, {
     "name" : "Mistress",
-    "year" : 2012,
+    "year" : "2012",
     "duration" : 146,
     "genres" : [ "Thriller", "Drama", "Fantasy" ],
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
@@ -1541,7 +1541,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1552,7 +1552,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1563,7 +1563,7 @@
     } ],
     "likedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1579,7 +1579,7 @@
   "error" : null,
   "currentMoviesList" : [ {
     "name" : "Belphecor: Curse of the Mummy (Belphégor - Le fantôme du Louvre)",
-    "year" : 1988,
+    "year" : "1988",
     "duration" : 178,
     "genres" : [ "Drama", "Comedy", "Fantasy" ],
     "actors" : [ "Florella Snoday", "Obie Dowsing", "Lynnea Denington", "Chrystal Evreux" ],
@@ -1589,7 +1589,7 @@
     "numRatings" : 0
   }, {
     "name" : "Celluloid Closet, The",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 155,
     "genres" : [ "Comedy", "Thriller", "Horror" ],
     "actors" : [ "Betta MacAughtrie", "Miltie Vousden", "Rand Eliasson", "Calypso Jamson" ],
@@ -1599,7 +1599,7 @@
     "numRatings" : 0
   }, {
     "name" : "Bag It",
-    "year" : 2008,
+    "year" : "2008",
     "duration" : 149,
     "genres" : [ "Drama", "Horror", "Fantasy" ],
     "actors" : [ "Rivy Aitken", "Farra Simnor", "Korie Sager", "Pauli Stapford" ],
@@ -1609,7 +1609,7 @@
     "numRatings" : 0
   }, {
     "name" : "Mistress",
-    "year" : 2012,
+    "year" : "2012",
     "duration" : 146,
     "genres" : [ "Thriller", "Drama", "Fantasy" ],
     "actors" : [ "Maighdiln Moroney", "Robinett Fennick", "Candice Hacquel", "Arlene Challoner" ],
@@ -1619,7 +1619,7 @@
     "numRatings" : 0
   }, {
     "name" : "The Well-Digger's Daughter",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 141,
     "genres" : [ "Comedy", "Mystery", "Drama" ],
     "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1629,7 +1629,7 @@
     "numRatings" : 0
   }, {
     "name" : "Shaolin Temple (Shao Lin si)",
-    "year" : 1987,
+    "year" : "1987",
     "duration" : 135,
     "genres" : [ "Horror", "Western", "Drama" ],
     "actors" : [ "Dallon Audenis", "Anica Wrigley", "Perrine Baskwell", "Pammie Bowmaker" ],
@@ -1639,7 +1639,7 @@
     "numRatings" : 0
   }, {
     "name" : "Little Foxes, The",
-    "year" : 1999,
+    "year" : "1999",
     "duration" : 128,
     "genres" : [ "Horror", "Action", "Thriller" ],
     "actors" : [ "Coleen Verheijden", "Dean McCooke", "Melamie Griswaite", "Clementine Loding" ],
@@ -1649,7 +1649,7 @@
     "numRatings" : 0
   }, {
     "name" : "My Sassy Girl",
-    "year" : 2005,
+    "year" : "2005",
     "duration" : 125,
     "genres" : [ "Comedy", "Mystery", "Fantasy" ],
     "actors" : [ "Mabel MacAless", "Iggy MacUchadair", "Arni Harrow", "Reg Kelleher" ],
@@ -1659,7 +1659,7 @@
     "numRatings" : 1
   }, {
     "name" : "Lord, Save Us from Your Followers",
-    "year" : 1998,
+    "year" : "1998",
     "duration" : 125,
     "genres" : [ "Comedy", "Western", "Mystery" ],
     "actors" : [ "Camey Ingold", "Grace Volleth", "Jermaine D'Ruel", "Anselma Saxelby" ],
@@ -1669,7 +1669,7 @@
     "numRatings" : 1
   }, {
     "name" : "The Empty Hours",
-    "year" : 2003,
+    "year" : "2003",
     "duration" : 106,
     "genres" : [ "Fantasy", "Thriller", "Mystery" ],
     "actors" : [ "Holly Sandbrook", "Phyllys Lindsell", "Bendick Bointon", "Dani Duigenan" ],
@@ -1679,7 +1679,7 @@
     "numRatings" : 0
   }, {
     "name" : "Jason's Lyric",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 103,
     "genres" : [ "Drama", "Mystery", "Western" ],
     "actors" : [ "Hoebart Lipscomb", "Romain Fehners", "Sam Restall", "Tildy Kenaway" ],
@@ -1689,7 +1689,7 @@
     "numRatings" : 0
   }, {
     "name" : "Comet in Moominland",
-    "year" : 2000,
+    "year" : "2000",
     "duration" : 91,
     "genres" : [ "Mystery", "Horror", "Western" ],
     "actors" : [ "Bertina Kemshell", "Marshall Bysshe", "Dexter Rickaert", "Zack Brandel" ],
@@ -1699,7 +1699,7 @@
     "numRatings" : 0
   }, {
     "name" : "Kiwi!",
-    "year" : 2002,
+    "year" : "2002",
     "duration" : 82,
     "genres" : [ "Western", "Mystery", "Romance" ],
     "actors" : [ "Carleen Pidgeon", "Lois Gibling", "Colver Corss", "Mora Piotrkowski" ],
@@ -1709,7 +1709,7 @@
     "numRatings" : 0
   }, {
     "name" : "Endangered Species",
-    "year" : 1994,
+    "year" : "1994",
     "duration" : 79,
     "genres" : [ "Mystery", "Fantasy", "Drama" ],
     "actors" : [ "Morry Lunny", "Freda Werrett", "Jewel Gareisr", "Carine Cucinotta" ],
@@ -1730,7 +1730,7 @@
     "numFreePremiumMovies" : 14,
     "purchasedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1741,7 +1741,7 @@
     } ],
     "watchedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],
@@ -1752,7 +1752,7 @@
     } ],
     "likedMovies" : [ {
       "name" : "The Well-Digger's Daughter",
-      "year" : 1994,
+      "year" : "1994",
       "duration" : 141,
       "genres" : [ "Comedy", "Mystery", "Drama" ],
       "actors" : [ "Fallon Sutcliff", "Maribeth Penas", "Codee Hooks", "Rubia Cotilard" ],

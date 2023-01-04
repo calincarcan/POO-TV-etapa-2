@@ -1,10 +1,6 @@
 package visitor;
 
-import data.Database;
-import data.User;
-import data.Movie;
-import data.CurrentPage;
-import data.ErrorMessage;
+import data.*;
 import factory.ErrorFactory;
 import factory.MovieFactory;
 import factory.UserFactory;
@@ -17,6 +13,13 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 public final class VisitorMovies implements Visitor {
+    /**
+     * Method filters the movies after Rating
+     *
+     * @param filters the filter parameters
+     * @param movies  the movies
+     * @return the filtered list
+     */
     private ArrayList<Movie> filterNoDuration(final Filters filters, ArrayList<Movie> movies) {
         movies = (ArrayList<Movie>) movies.stream()
                 .sorted((o1, o2) -> {
@@ -44,6 +47,13 @@ public final class VisitorMovies implements Visitor {
         return movies;
     }
 
+    /**
+     * Method filters the movies after Rating and Duration
+     *
+     * @param filters the filter parameters
+     * @param movies  the movies
+     * @return the filtered list
+     */
     private ArrayList<Movie> filter(final Filters filters, final ArrayList<Movie> movies) {
         return new ArrayList<>(movies.stream()
                 .sorted((o1, o2) -> {
@@ -52,15 +62,13 @@ public final class VisitorMovies implements Visitor {
                             if (filters.getSort().getRating().equals("decreasing")) {
                                 if (o2.getDuration() - o1.getDuration() == 0) {
                                     return (int) (o2.getRating() - o1.getRating());
-                                }
-                                else {
+                                } else {
                                     return o2.getDuration() - o1.getDuration();
                                 }
                             } else {
                                 if (o2.getDuration() - o1.getDuration() == 0) {
                                     return (int) (o1.getRating() - o2.getRating());
-                                }
-                                else {
+                                } else {
                                     return (o2.getDuration() - o1.getDuration());
                                 }
                             }
@@ -68,15 +76,13 @@ public final class VisitorMovies implements Visitor {
                             if (filters.getSort().getRating().equals("decreasing")) {
                                 if (o1.getDuration() - o2.getDuration() == 0) {
                                     return (int) (o2.getRating() - o1.getRating());
-                                }
-                                else {
+                                } else {
                                     return o1.getDuration() - o2.getDuration();
                                 }
                             } else {
                                 if (o1.getDuration() - o2.getDuration() == 0) {
                                     return (int) (o1.getRating() - o2.getRating());
-                                }
-                                else {
+                                } else {
                                     return (o1.getDuration() - o2.getDuration());
                                 }
                             }
@@ -89,10 +95,11 @@ public final class VisitorMovies implements Visitor {
     /**
      * Visitor executes the on page and change page commands specific
      * to the movies page
+     *
      * @param currentPage current page
-     * @param action action
-     * @param db database
-     * @param output output
+     * @param action      action
+     * @param db          database
+     * @param output      output
      */
     public void visit(final CurrentPage currentPage, final Action action,
                       final Database db, final ArrayNode output) {
@@ -100,18 +107,11 @@ public final class VisitorMovies implements Visitor {
         String pageName = action.getPage();
         switch (actionType) {
             case "change page" -> {
-                if (!pageName.equals("home")
-                        && !pageName.equals("see details")
+                if (!pageName.equals("see details")
                         && !pageName.equals("logout")
                         && !pageName.equals("movies")) {
                     ErrorMessage err = ErrorFactory.standardErr();
                     output.addPOJO(err);
-                    break;
-                }
-                if (pageName.equals("home")) {
-                    currentPage.resetHomeAUTH();
-                    String country = db.getCurrUser().getCredentials().getCountry();
-                    db.setCurrMovies(CountryFilter.moviePerms(country, db));
                     break;
                 }
                 if (pageName.equals("logout")) {
@@ -134,6 +134,8 @@ public final class VisitorMovies implements Visitor {
                         currentPage.resetMovies();
                         break;
                     } else {
+                        db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
                         currentPage.resetSeeDetails();
                         ArrayList<Movie> errMovie = new ArrayList<>();
                         errMovie.add(MovieFactory.createMovie(details));
@@ -146,6 +148,8 @@ public final class VisitorMovies implements Visitor {
                     }
                 }
                 if (pageName.equals("movies")) {
+                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
                     db.setCurrMovies(CountryFilter
                             .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     currentPage.resetMovies();

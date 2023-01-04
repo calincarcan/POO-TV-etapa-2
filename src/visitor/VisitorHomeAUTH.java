@@ -1,14 +1,11 @@
 package visitor;
 
-import data.CurrentPage;
-import data.Movie;
-import data.ErrorMessage;
-import data.User;
-import data.Database;
+import data.*;
 import factory.ErrorFactory;
 import factory.MovieFactory;
 import factory.UserFactory;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import filters.CountryFilter;
 import iofiles.Action;
 
 import java.util.ArrayList;
@@ -41,6 +38,20 @@ public final class VisitorHomeAUTH implements Visitor {
                     break;
                 }
                 if (action.getPage().equals("movies")) {
+                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
+//                    currentPage.resetMovies();
+//                    User user = UserFactory.createUser(db.getCurrUser());
+//                    ArrayList<Movie> list = new ArrayList<>();
+//                    for (Movie movie : db.getCurrMovies()) {
+//                        list.add(MovieFactory.createMovie(movie));
+//                    }
+//                    ErrorMessage err = ErrorFactory
+//                            .createErr(null, list, user);
+//                    output.addPOJO(err);
+//                    break;
+                    db.setCurrMovies(CountryFilter
+                            .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     currentPage.resetMovies();
                     User user = UserFactory.createUser(db.getCurrUser());
                     ArrayList<Movie> list = new ArrayList<>();
@@ -53,6 +64,8 @@ public final class VisitorHomeAUTH implements Visitor {
                     break;
                 }
                 if (action.getPage().equals("upgrades")) {
+                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
                     currentPage.resetUpgrades();
                     break;
                 }

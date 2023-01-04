@@ -1,10 +1,6 @@
 package visitor;
 
-import data.ErrorMessage;
-import data.User;
-import data.Movie;
-import data.CurrentPage;
-import data.Database;
+import data.*;
 import factory.ErrorFactory;
 import factory.MovieFactory;
 import factory.UserFactory;
@@ -13,6 +9,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import iofiles.Action;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public final class VisitorSeeDetails implements Visitor {
     /**
@@ -27,20 +24,23 @@ public final class VisitorSeeDetails implements Visitor {
                       final Database db, final ArrayNode output) {
         String actionType = action.getType();
         switch (actionType) {
-            case "change page" -> {
-                if (!action.getPage().equals("movies")
-                        && !action.getPage().equals("subscribe")
-                        && !action.getPage().equals("home")
-                        && !action.getPage().equals("upgrades")
-                        && !action.getPage().equals("logout")) {
+            case "subscribe" -> {
+                ArrayList<String> currMovieGenres = db.getCurrMovies().get(0).getGenres();
+                ArrayList<String> currUserGenres = db.getCurrUser().getSubscribedGenres();
+                if (!currMovieGenres.contains(action.getSubscribedGenre())
+                        || currUserGenres.contains(action.getSubscribedGenre())) {
                     ErrorMessage err = ErrorFactory.standardErr();
                     output.addPOJO(err);
                     break;
                 }
-                if (action.getPage().equals("home")) {
-                    db.setCurrMovies(CountryFilter
-                            .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
-                    currentPage.resetHomeAUTH();
+                db.getCurrUser().getSubscribedGenres().add(action.getSubscribedGenre());
+            }
+            case "change page" -> {
+                if (!action.getPage().equals("movies")
+                        && !action.getPage().equals("upgrades")
+                        && !action.getPage().equals("logout")) {
+                    ErrorMessage err = ErrorFactory.standardErr();
+                    output.addPOJO(err);
                     break;
                 }
                 if (action.getPage().equals("logout")) {
@@ -50,6 +50,8 @@ public final class VisitorSeeDetails implements Visitor {
                     break;
                 }
                 if (action.getPage().equals("movies")) {
+                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
                     db.setCurrMovies(CountryFilter
                             .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     currentPage.resetMovies();
@@ -63,19 +65,9 @@ public final class VisitorSeeDetails implements Visitor {
                     output.addPOJO(err);
                 }
                 if (action.getPage().equals("upgrades")) {
+                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+
                     currentPage.resetUpgrades();
-                    break;
-                }
-                if (action.getPage().equals("subscribe")) {
-                    ArrayList<String> currMovieGenres = db.getCurrMovies().get(0).getGenres();
-                    ArrayList<String> currUserGenres = db.getCurrUser().getSubscribedGenres();
-                    if (!currMovieGenres.contains(action.getSubscribedGenre())
-                            || currUserGenres.contains(action.getSubscribedGenre())) {
-                        ErrorMessage err = ErrorFactory.standardErr();
-                        output.addPOJO(err);
-                        break;
-                    }
-                    db.getCurrUser().getSubscribedGenres().add(action.getSubscribedGenre());
                     break;
                 }
             }
@@ -100,6 +92,13 @@ public final class VisitorSeeDetails implements Visitor {
                         break;
                     }
                     User user = db.getCurrUser();
+
+                    if (user.getPurchasedMovies().contains(movie)) {
+                        ErrorMessage err = ErrorFactory.standardErr();
+                        output.addPOJO(err);
+                        break;
+                    }
+
                     if (user.getCredentials().getAccountType().equals("premium")) {
                         int aux = user.getNumFreePremiumMovies();
                         if (aux > 0) {
@@ -149,7 +148,11 @@ public final class VisitorSeeDetails implements Visitor {
                         output.addPOJO(err);
                         break;
                     }
-                    user.getWatchedMovies().add(watchedMovie);
+
+                    if (!user.getWatchedMovies().contains(watchedMovie)) {
+                        user.getWatchedMovies().add(watchedMovie);
+                    }
+
                     user = UserFactory.createUser(db.getCurrUser());
                     ArrayList<Movie> list = new ArrayList<>();
                     list.add(MovieFactory.createMovie(watchedMovie));
@@ -175,8 +178,12 @@ public final class VisitorSeeDetails implements Visitor {
                         output.addPOJO(err);
                         break;
                     }
-                    user.getLikedMovies().add(likedMovie);
-                    likedMovie.setNumLikes(likedMovie.getNumLikes() + 1);
+
+                    if (!user.getLikedMovies().contains(likedMovie)) {
+                        user.getLikedMovies().add(likedMovie);
+                        likedMovie.setNumLikes(likedMovie.getNumLikes() + 1);
+                    }
+
                     user = UserFactory.createUser(db.getCurrUser());
                     ArrayList<Movie> list = new ArrayList<>();
                     list.add(MovieFactory.createMovie(likedMovie));
@@ -186,11 +193,13 @@ public final class VisitorSeeDetails implements Visitor {
                 }
                 if (action.getFeature().equals("rate")) {
                     action.setMovie(db.getCurrMovies().get(0).getName());
+
                     if (action.getRate() < MIN_RATING || action.getRate() > MAX_RATING) {
                         ErrorMessage err = ErrorFactory.standardErr();
                         output.addPOJO(err);
                         break;
                     }
+
                     User user = db.getCurrUser();
                     String movie = action.getMovie();
                     Movie ratedMovie = null;
@@ -202,15 +211,25 @@ public final class VisitorSeeDetails implements Visitor {
                             break;
                         }
                     }
+
                     if (!found) {
                         ErrorMessage err = ErrorFactory.standardErr();
                         output.addPOJO(err);
                         break;
                     }
-                    user.getRatedMovies().add(ratedMovie);
-                    ratedMovie.setSumRatings(ratedMovie.getSumRatings() + action.getRate());
-                    ratedMovie.setNumRatings(ratedMovie.getNumRatings() + 1);
-                    ratedMovie.setRating(ratedMovie.getSumRatings() / ratedMovie.getNumRatings());
+
+                    ratedMovie.getRatingMap().put(user, action.getRate());
+                    double sum = 0;
+                    for (Map.Entry<User, Integer> entry : ratedMovie.getRatingMap().entrySet()) {
+                        sum +=entry.getValue();
+                    }
+                    ratedMovie.setRating(sum/ratedMovie.getRatingMap().size());
+                    ratedMovie.setNumRatings(ratedMovie.getRatingMap().size());
+
+                    if (!user.getRatedMovies().contains(ratedMovie)) {
+                        user.getRatedMovies().add(ratedMovie);
+                    }
+
                     user = UserFactory.createUser(db.getCurrUser());
                     ArrayList<Movie> list = new ArrayList<>();
                     list.add(MovieFactory.createMovie(ratedMovie));

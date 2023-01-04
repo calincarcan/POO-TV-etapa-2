@@ -1,7 +1,4 @@
-import data.CurrentPage;
-import data.Database;
-import data.ErrorMessage;
-import data.Movie;
+import data.*;
 import factory.ErrorFactory;
 import factory.VisitorFactory;
 
@@ -54,11 +51,31 @@ public final class Main {
             } else {
                 if (action.getType().equals("back")) {
 
+                    if (database.getCurrUser() == null || database.getUndoStack().isEmpty()) {
+                        ErrorMessage err = ErrorFactory.standardErr();
+                        output.addPOJO(err);
+                        continue;
+                    }
+
+                    if (database.getUndoStack().size() == 1) {
+                        currentPage.resetHomeAUTH();
+                        database.getUndoStack().pop();
+                        continue;
+                    }
+
+                    database.getUndoStack().pop();
+                    ChangePageCommand command = database.getUndoStack().pop();
+                    String visitorName = command.getPage();
+                    Visitor visitorAux = currentPage.getVisitorColl().get(visitorName);
+                    Action actionAux = command.getAction();
+
+                    currentPage.accept(visitorAux, actionAux, database, output);
+
                     continue;
                 }
                 switch (action.getFeature()) {
                     case "add" -> {
-                        if (database.findMovie(action.getAddedMovie().getName()) == null) {
+                        if (database.findMovie(action.getAddedMovie().getName()) != null) {
                             ErrorMessage err = ErrorFactory.standardErr();
                             output.addPOJO(err);
                         } else {
@@ -68,7 +85,7 @@ public final class Main {
                         }
                     }
                     case "delete" -> {
-                        Movie movie = database.findMovie(action.getAddedMovie().getName());
+                        Movie movie = database.findMovie(action.getDeletedMovie());
                         if (movie == null) {
                             ErrorMessage err = ErrorFactory.standardErr();
                             output.addPOJO(err);

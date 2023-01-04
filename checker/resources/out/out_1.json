@@ -52,4 +52,8 @@
     "ratedMovies" : [ ],
     "notifications" : [ ]
   }
+}, {
+  "error" : "Error",
+  "currentMoviesList" : [ ],
+  "currentUser" : null
 } ]
