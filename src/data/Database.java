@@ -25,11 +25,11 @@ public class Database {
         currUser.getLikeMap().entrySet().stream().sorted(Map.Entry.comparingByValue())
                 .forEach(stringIntegerEntry -> genres.add(stringIntegerEntry.getKey()));
         Collections.reverse(genres);
-        movies.sort(Comparator.comparingInt(Movie::getNumLikes));
         currMovies = CountryFilter.moviePerms(currUser.getCredentials().getCountry(), this);
+        currMovies.sort((o1, o2) -> o2.getNumLikes() - o1.getNumLikes());
 
         for (String genre : genres) {
-            for (Movie movie : movies) {
+            for (Movie movie : currMovies) {
                 if (movie.getGenres().contains(genre) && !currUser.getWatchedMovies().contains(movie))
                     return movie.getName();
             }
@@ -52,6 +52,7 @@ public class Database {
                 if (user.getSubscribedGenres().contains(genre)) {
                     Notification notification = new Notification(movie.getName(), "ADD");
                     user.getNotifications().add(notification);
+                    break;
                 }
             }
         }

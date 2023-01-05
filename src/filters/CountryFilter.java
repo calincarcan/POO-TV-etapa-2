@@ -9,6 +9,7 @@ public final class CountryFilter {
     /**
      * Method parses the whole movie database and returns a list containing all the movies that
      * can be viewed by a user from a given country
+     *
      * @param country country permissions
      * @param db database
      * @return allowedMovieList

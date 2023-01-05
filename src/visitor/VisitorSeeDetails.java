@@ -24,17 +24,6 @@ public final class VisitorSeeDetails implements Visitor {
                       final Database db, final ArrayNode output) {
         String actionType = action.getType();
         switch (actionType) {
-            case "subscribe" -> {
-                ArrayList<String> currMovieGenres = db.getCurrMovies().get(0).getGenres();
-                ArrayList<String> currUserGenres = db.getCurrUser().getSubscribedGenres();
-                if (!currMovieGenres.contains(action.getSubscribedGenre())
-                        || currUserGenres.contains(action.getSubscribedGenre())) {
-                    ErrorMessage err = ErrorFactory.standardErr();
-                    output.addPOJO(err);
-                    break;
-                }
-                db.getCurrUser().getSubscribedGenres().add(action.getSubscribedGenre());
-            }
             case "change page" -> {
                 if (!action.getPage().equals("movies")
                         && !action.getPage().equals("upgrades")
@@ -78,9 +67,22 @@ public final class VisitorSeeDetails implements Visitor {
                 if (!action.getFeature().equals("purchase")
                         && !action.getFeature().equals("watch")
                         && !action.getFeature().equals("like")
+                        && !action.getFeature().equals("subscribe")
                         && !action.getFeature().equals("rate")) {
                     ErrorMessage err = ErrorFactory.standardErr();
                     output.addPOJO(err);
+                    break;
+                }
+                if (action.getFeature().equals("subscribe")) {
+                    ArrayList<String> currMovieGenres = db.getCurrMovies().get(0).getGenres();
+                    ArrayList<String> currUserGenres = db.getCurrUser().getSubscribedGenres();
+                    if (!currMovieGenres.contains(action.getSubscribedGenre())
+                            || currUserGenres.contains(action.getSubscribedGenre())) {
+                        ErrorMessage err = ErrorFactory.standardErr();
+                        output.addPOJO(err);
+                        break;
+                    }
+                    db.getCurrUser().getSubscribedGenres().add(action.getSubscribedGenre());
                     break;
                 }
                 if (action.getFeature().equals("purchase")) {
