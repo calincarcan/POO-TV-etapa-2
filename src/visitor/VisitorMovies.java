@@ -1,9 +1,15 @@
 package visitor;
 
-import data.*;
-import factory.ErrorFactory;
-import factory.MovieFactory;
-import factory.UserFactory;
+import data.Movie;
+import data.ErrorMessage;
+import data.User;
+import data.Database;
+import data.ChangePageCommand;
+import data.CurrentPage;
+
+
+import multiconstructors.MovieConstructor;
+import multiconstructors.UserConstructor;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import iofiles.Action;
 import iofiles.Filters;
@@ -110,7 +116,7 @@ public final class VisitorMovies implements Visitor {
                 if (!pageName.equals("see details")
                         && !pageName.equals("logout")
                         && !pageName.equals("movies")) {
-                    ErrorMessage err = ErrorFactory.standardErr();
+                    ErrorMessage err = ErrorMessage.getStdError();
                     output.addPOJO(err);
                     break;
                 }
@@ -129,37 +135,46 @@ public final class VisitorMovies implements Visitor {
                 }
                 if (pageName.equals("see details")) {
                     if (details == null) {
-                        ErrorMessage err = ErrorFactory.standardErr();
+                        ErrorMessage err = ErrorMessage.getStdError();
                         output.addPOJO(err);
                         currentPage.resetMovies();
                         break;
                     } else {
-                        db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+                        db.getUndoStack()
+                                .push(new ChangePageCommand(currentPage.getPageName(), action));
 
                         currentPage.resetSeeDetails();
                         ArrayList<Movie> errMovie = new ArrayList<>();
-                        errMovie.add(MovieFactory.createMovie(details));
-                        User user = UserFactory.createUser(db.getCurrUser());
+                        errMovie.add(MovieConstructor.createMovie(details));
+                        User user = UserConstructor.createUser(db.getCurrUser());
                         db.setCurrMovies(new ArrayList<>());
                         db.getCurrMovies().add(details);
-                        ErrorMessage err = ErrorFactory.createErr(null, errMovie, user);
+                        ErrorMessage err = new ErrorMessage.Builder()
+                                .error(null)
+                                .currentMoviesList(errMovie)
+                                .currentUser(user)
+                                .build();
                         output.addPOJO(err);
                         break;
                     }
                 }
                 if (pageName.equals("movies")) {
-                    db.getUndoStack().push(new ChangePageCommand(currentPage.getPageName(), action));
+                    db.getUndoStack()
+                            .push(new ChangePageCommand(currentPage.getPageName(), action));
 
                     db.setCurrMovies(CountryFilter
                             .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     currentPage.resetMovies();
-                    User user = UserFactory.createUser(db.getCurrUser());
+                    User user = UserConstructor.createUser(db.getCurrUser());
                     ArrayList<Movie> list = new ArrayList<>();
                     for (Movie movie : db.getCurrMovies()) {
-                        list.add(MovieFactory.createMovie(movie));
+                        list.add(MovieConstructor.createMovie(movie));
                     }
-                    ErrorMessage err = ErrorFactory
-                            .createErr(null, list, user);
+                    ErrorMessage err = new ErrorMessage.Builder()
+                            .error(null)
+                            .currentMoviesList(list)
+                            .currentUser(user)
+                            .build();
                     output.addPOJO(err);
                     break;
                 }
@@ -167,18 +182,23 @@ public final class VisitorMovies implements Visitor {
             case "on page" -> {
                 if (!action.getFeature().equals("search")
                         && !action.getFeature().equals("filter")) {
-                    ErrorMessage err = ErrorFactory.standardErr();
+                    ErrorMessage err = ErrorMessage.getStdError();
                     output.addPOJO(err);
                     break;
                 }
                 if (action.getFeature().equals("search")) {
                     ArrayList<Movie> list = new ArrayList<>();
                     for (Movie movie : db.getCurrMovies()) {
-                        if (movie.getName().indexOf(action.getStartsWith()) == 0)
-                            list.add(MovieFactory.createMovie(movie));
+                        if (movie.getName().indexOf(action.getStartsWith()) == 0) {
+                            list.add(MovieConstructor.createMovie(movie));
+                        }
                     }
-                    User errUser = UserFactory.createUser(db.getCurrUser());
-                    ErrorMessage err = ErrorFactory.createErr(null, list, errUser);
+                    User errUser = UserConstructor.createUser(db.getCurrUser());
+                    ErrorMessage err = new ErrorMessage.Builder()
+                            .error(null)
+                            .currentMoviesList(list)
+                            .currentUser(errUser)
+                            .build();
                     output.addPOJO(err);
                     break;
                 }
@@ -187,7 +207,7 @@ public final class VisitorMovies implements Visitor {
                     db.setCurrMovies(CountryFilter
                             .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     for (Movie movie : db.getCurrMovies()) {
-                        list.add(MovieFactory.createMovie(movie));
+                        list.add(MovieConstructor.createMovie(movie));
                     }
                     if (action.getFilters().getContains() != null) {
                         // Filter by genre
@@ -213,11 +233,15 @@ public final class VisitorMovies implements Visitor {
                     }
                     ArrayList<Movie> errList = new ArrayList<>();
                     for (Movie movie : list) {
-                        errList.add(MovieFactory.createMovie(movie));
+                        errList.add(MovieConstructor.createMovie(movie));
                     }
                     db.setCurrMovies(list);
-                    User user = UserFactory.createUser(db.getCurrUser());
-                    ErrorMessage err = ErrorFactory.createErr(null, errList, user);
+                    User user = UserConstructor.createUser(db.getCurrUser());
+                    ErrorMessage err = new ErrorMessage.Builder()
+                            .error(null)
+                            .currentMoviesList(errList)
+                            .currentUser(user)
+                            .build();
                     output.addPOJO(err);
                 }
             }

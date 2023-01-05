@@ -4,8 +4,7 @@ import data.CurrentPage;
 import data.Database;
 import data.ErrorMessage;
 import data.User;
-import factory.ErrorFactory;
-import factory.UserFactory;
+import multiconstructors.UserConstructor;
 import filters.CountryFilter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import iofiles.Action;
@@ -48,7 +47,7 @@ public final class VisitorHomeNAUTH implements Visitor {
             case "change page" -> {
                 if (!action.getPage().equals("login")
                         && !action.getPage().equals("register")) {
-                    ErrorMessage err = ErrorFactory.standardErr();
+                    ErrorMessage err = ErrorMessage.getStdError();
                     output.addPOJO(err);
                     currentPage.resetHomeNAUTH();
                     break;
@@ -59,7 +58,7 @@ public final class VisitorHomeNAUTH implements Visitor {
                 if (action.getFeature().equals("login")) {
                     User foundUser = checkLogin(action, db);
                     if (!action.getFeature().equals("login") || foundUser == null) {
-                        ErrorMessage err = ErrorFactory.standardErr();
+                        ErrorMessage err = ErrorMessage.getStdError();
                         output.addPOJO(err);
                         currentPage.resetHomeNAUTH();
                         break;
@@ -69,24 +68,28 @@ public final class VisitorHomeNAUTH implements Visitor {
                         currentPage.resetHomeAUTH();
                         db.setCurrUser(foundUser);
 
-                        User errUser = UserFactory.createUser(foundUser);
+                        User errUser = UserConstructor.createUser(foundUser);
                         db.setCurrMovies(CountryFilter
                                 .moviePerms(foundUser.getCredentials().getCountry(), db));
-                        ErrorMessage err = ErrorFactory.createErr(null, new ArrayList<>(), errUser);
+                        ErrorMessage err = new ErrorMessage.Builder()
+                                .error(null)
+                                .currentMoviesList(new ArrayList<>())
+                                .currentUser(errUser)
+                                .build();
                         output.addPOJO(err);
                         break;
                     }
                 }
                 if (action.getFeature().equals("register")) {
                     if (!action.getFeature().equals("register")) {
-                        ErrorMessage err = ErrorFactory.standardErr();
+                        ErrorMessage err = ErrorMessage.getStdError();
                         output.addPOJO(err);
                         currentPage.resetHomeNAUTH();
                         break;
                     }
                     db.setUndoStack(new Stack<>());
 
-                    User newUser = UserFactory.createUser(action.getCredentials());
+                    User newUser = UserConstructor.createUser(action.getCredentials());
                     db.getUsers().add(newUser);
 
                     db.setCurrMovies(CountryFilter
@@ -94,8 +97,12 @@ public final class VisitorHomeNAUTH implements Visitor {
                     currentPage.resetHomeAUTH();
                     db.setCurrUser(newUser);
 
-                    User errUser = UserFactory.createUser(newUser);
-                    ErrorMessage err = ErrorFactory.createErr(null, new ArrayList<>(), errUser);
+                    User errUser = UserConstructor.createUser(newUser);
+                    ErrorMessage err = new ErrorMessage.Builder()
+                            .error(null)
+                            .currentMoviesList(new ArrayList<>())
+                            .currentUser(errUser)
+                            .build();
                     output.addPOJO(err);
                 }
             }

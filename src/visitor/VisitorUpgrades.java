@@ -1,9 +1,8 @@
 package visitor;
 
 import data.*;
-import factory.ErrorFactory;
-import factory.MovieFactory;
-import factory.UserFactory;
+import multiconstructors.MovieConstructor;
+import multiconstructors.UserConstructor;
 import filters.CountryFilter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import iofiles.Action;
@@ -26,7 +25,7 @@ public final class VisitorUpgrades implements Visitor {
             case "change page" -> {
                 if (!action.getPage().equals("movies")
                         && !action.getPage().equals("logout")) {
-                    ErrorMessage err = ErrorFactory.standardErr();
+                    ErrorMessage err = ErrorMessage.getStdError();
                     output.addPOJO(err);
                     break;
                 }
@@ -36,13 +35,16 @@ public final class VisitorUpgrades implements Visitor {
                     db.setCurrMovies(CountryFilter
                             .moviePerms(db.getCurrUser().getCredentials().getCountry(), db));
                     currentPage.resetMovies();
-                    User user = UserFactory.createUser(db.getCurrUser());
+                    User user = UserConstructor.createUser(db.getCurrUser());
                     ArrayList<Movie> list = new ArrayList<>();
                     for (Movie movie : db.getCurrMovies()) {
-                        list.add(MovieFactory.createMovie(movie));
+                        list.add(MovieConstructor.createMovie(movie));
                     }
-                    ErrorMessage err = ErrorFactory
-                            .createErr(null, list, user);
+                    ErrorMessage err = new ErrorMessage.Builder()
+                            .error(null)
+                            .currentMoviesList(list)
+                            .currentUser(user)
+                            .build();
                     output.addPOJO(err);
                     break;
                 }
@@ -51,10 +53,10 @@ public final class VisitorUpgrades implements Visitor {
                 db.setCurrMovies(new ArrayList<>());
             }
             case "on page" -> {
-                final int PREMIUM_COST = 10;
+                final int premiumCost = 10;
                 if (!action.getFeature().equals("buy tokens")
                         && !action.getFeature().equals("buy premium account")) {
-                    ErrorMessage err = ErrorFactory.standardErr();
+                    ErrorMessage err = ErrorMessage.getStdError();
                     output.addPOJO(err);
                     break;
                 }
@@ -63,7 +65,7 @@ public final class VisitorUpgrades implements Visitor {
                     int balance = Integer.parseInt(user.getCredentials().getBalance());
                     int count = Integer.parseInt(action.getCount());
                     if (balance < count) {
-                        ErrorMessage err = ErrorFactory.standardErr();
+                        ErrorMessage err = ErrorMessage.getStdError();
                         output.addPOJO(err);
                         break;
                     }
@@ -74,12 +76,12 @@ public final class VisitorUpgrades implements Visitor {
                 }
                 User user = db.getCurrUser();
                 int tokens = user.getTokensCount();
-                if (tokens < PREMIUM_COST) {
-                    ErrorMessage err = ErrorFactory.standardErr();
+                if (tokens < premiumCost) {
+                    ErrorMessage err = ErrorMessage.getStdError();
                     output.addPOJO(err);
                     break;
                 }
-                user.setTokensCount(user.getTokensCount() - PREMIUM_COST);
+                user.setTokensCount(user.getTokensCount() - premiumCost);
                 user.getCredentials().setAccountType("premium");
             }
             default -> {

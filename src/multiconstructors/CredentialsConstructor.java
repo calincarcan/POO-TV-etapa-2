@@ -1,8 +1,8 @@
-package factory;
+package multiconstructors;
 
 import iofiles.Credentials;
 
-public final class CredentialsFactory {
+public final class CredentialsConstructor {
     /**
      * Method creates a copy of a Credentials object identical to a given Credentials object
      * @param credentials credentials to copy
@@ -19,7 +19,7 @@ public final class CredentialsFactory {
         return copyCredentials;
     }
 
-    private CredentialsFactory() {
+    private CredentialsConstructor() {
 
     }
 }

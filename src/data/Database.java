@@ -2,13 +2,14 @@ package data;
 
 import filters.CountryFilter;
 import iofiles.Action;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.security.PrivilegedAction;
-import java.util.*;
-import java.util.function.Consumer;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Map;
+import java.util.Stack;
+
 
 @Setter
 @Getter
@@ -20,6 +21,11 @@ public class Database {
     private ArrayList<Movie> currMovies;
     private Stack<ChangePageCommand> undoStack;
 
+    /**
+     * Method returns the name of the movie recommended
+     *
+     * @return name of the movie recommended or null
+     */
     public String getRecommendation() {
         ArrayList<String> genres = new ArrayList<>();
         currUser.getLikeMap().entrySet().stream().sorted(Map.Entry.comparingByValue())
@@ -30,8 +36,10 @@ public class Database {
 
         for (String genre : genres) {
             for (Movie movie : currMovies) {
-                if (movie.getGenres().contains(genre) && !currUser.getWatchedMovies().contains(movie))
+                if (movie.getGenres().contains(genre)
+                        && !currUser.getWatchedMovies().contains(movie)) {
                     return movie.getName();
+                }
             }
         }
         return null;
@@ -100,7 +108,7 @@ public class Database {
      * @param name name of the movie
      * @return reference to the movie or null
      */
-    public Movie findMovie(String name) {
+    public Movie findMovie(final String name) {
         for (Movie movie : movies) {
             if (movie.getName().equals(name)) {
                 return movie;

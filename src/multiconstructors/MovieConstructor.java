@@ -1,11 +1,11 @@
-package factory;
+package multiconstructors;
 
 import data.Movie;
 import iofiles.Movieio;
 
 import java.util.HashMap;
 
-public final class MovieFactory {
+public final class MovieConstructor {
     /**
      * Method creates a copy of a Movie object given a Movie object
      * @param movie movie to copy
@@ -49,7 +49,7 @@ public final class MovieFactory {
         newMovie.setRatingMap(new HashMap<>());
         return newMovie;
     }
-    private MovieFactory() {
+    private MovieConstructor() {
 
     }
 }

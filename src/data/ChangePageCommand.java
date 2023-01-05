@@ -7,8 +7,8 @@ import lombok.Setter;
 @Setter
 @Getter
 public class ChangePageCommand {
-    String page;
-    Action action;
+    private String page;
+    private Action action;
 
     public ChangePageCommand(final String page, final Action action) {
         this.page = page;

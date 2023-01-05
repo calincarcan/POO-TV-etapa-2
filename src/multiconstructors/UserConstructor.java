@@ -1,4 +1,4 @@
-package factory;
+package multiconstructors;
 
 import data.Movie;
 import data.Notification;
@@ -8,7 +8,7 @@ import iofiles.Userio;
 
 import java.util.ArrayList;
 
-public final class UserFactory {
+public final class UserConstructor {
     /**
      * Method creates a copy of a User object given a User object
      * @param user user to copy
@@ -16,27 +16,27 @@ public final class UserFactory {
      */
     public static User createUser(final User user) {
         User copyUser = new User();
-        copyUser.setCredentials(CredentialsFactory.createCred(user.getCredentials()));
+        copyUser.setCredentials(CredentialsConstructor.createCred(user.getCredentials()));
         copyUser.setTokensCount(user.getTokensCount());
         copyUser.setNumFreePremiumMovies(user.getNumFreePremiumMovies());
         ArrayList<Movie> auxList = new ArrayList<>();
         for (Movie movie : user.getPurchasedMovies()) {
-            auxList.add(MovieFactory.createMovie(movie));
+            auxList.add(MovieConstructor.createMovie(movie));
         }
         copyUser.setPurchasedMovies(auxList);
         auxList = new ArrayList<>();
         for (Movie movie : user.getWatchedMovies()) {
-            auxList.add(MovieFactory.createMovie(movie));
+            auxList.add(MovieConstructor.createMovie(movie));
         }
         copyUser.setWatchedMovies(auxList);
         auxList = new ArrayList<>();
         for (Movie movie : user.getLikedMovies()) {
-            auxList.add(MovieFactory.createMovie(movie));
+            auxList.add(MovieConstructor.createMovie(movie));
         }
         copyUser.setLikedMovies(auxList);
         auxList = new ArrayList<>();
         for (Movie movie : user.getRatedMovies()) {
-            auxList.add(MovieFactory.createMovie(movie));
+            auxList.add(MovieConstructor.createMovie(movie));
         }
         copyUser.setRatedMovies(auxList);
         // Notification list copy
@@ -79,10 +79,11 @@ public final class UserFactory {
      * @return newUser
      */
     public static User createUser(final Credentials credentials) {
+        final int nrFreeMovies = 15;
         User newUser = new User();
         newUser.setCredentials(credentials);
         newUser.setTokensCount(0);
-        newUser.setNumFreePremiumMovies(15);
+        newUser.setNumFreePremiumMovies(nrFreeMovies);
         newUser.setPurchasedMovies(new ArrayList<>());
         newUser.setWatchedMovies(new ArrayList<>());
         newUser.setLikedMovies(new ArrayList<>());
@@ -91,7 +92,7 @@ public final class UserFactory {
         newUser.setSubscribedGenres(new ArrayList<>());
         return newUser;
     }
-    private UserFactory() {
+    private UserConstructor() {
 
     }
 }

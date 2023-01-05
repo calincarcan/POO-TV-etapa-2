@@ -1,7 +1,6 @@
 package data;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +9,6 @@ import java.util.HashMap;
 
 @Setter
 @Getter
-//@JsonIgnoreProperties({ "sumRatings" })
 public class Movie {
     private String name;
     private String year;

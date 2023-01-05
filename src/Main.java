@@ -1,9 +1,8 @@
 import data.*;
-import factory.ErrorFactory;
 import factory.VisitorFactory;
 
-import factory.MovieFactory;
-import factory.UserFactory;
+import multiconstructors.MovieConstructor;
+import multiconstructors.UserConstructor;
 import visitor.Visitor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
@@ -15,7 +14,6 @@ import iofiles.Userio;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Objects;
 
 public final class Main {
@@ -39,10 +37,10 @@ public final class Main {
         // Database populated
         Database database = new Database();
         for (Userio user : inputData.getUsers()) {
-            database.getUsers().add(UserFactory.createUser(user));
+            database.getUsers().add(UserConstructor.createUser(user));
         }
         for (Movieio movie : inputData.getMovies()) {
-            database.getMovies().add(MovieFactory.createMovie(movie));
+            database.getMovies().add(MovieConstructor.createMovie(movie));
         }
         database.setActions(inputData.getActions());
         for (Action action : database.getActions()) {
@@ -53,7 +51,7 @@ public final class Main {
                 if (action.getType().equals("back")) {
 
                     if (database.getCurrUser() == null || database.getUndoStack().isEmpty()) {
-                        ErrorMessage err = ErrorFactory.standardErr();
+                        ErrorMessage err = ErrorMessage.getStdError();
                         output.addPOJO(err);
                         continue;
                     }
@@ -77,10 +75,10 @@ public final class Main {
                 switch (action.getFeature()) {
                     case "add" -> {
                         if (database.findMovie(action.getAddedMovie().getName()) != null) {
-                            ErrorMessage err = ErrorFactory.standardErr();
+                            ErrorMessage err = ErrorMessage.getStdError();
                             output.addPOJO(err);
                         } else {
-                            Movie movie = MovieFactory.createMovie(action.getAddedMovie());
+                            Movie movie = MovieConstructor.createMovie(action.getAddedMovie());
                             database.getMovies().add(movie);
                             database.notifyUsersADD(movie);
                         }
@@ -88,7 +86,7 @@ public final class Main {
                     case "delete" -> {
                         Movie movie = database.findMovie(action.getDeletedMovie());
                         if (movie == null) {
-                            ErrorMessage err = ErrorFactory.standardErr();
+                            ErrorMessage err = ErrorMessage.getStdError();
                             output.addPOJO(err);
                         } else {
                             database.notifyUsersDELETE(movie);
@@ -96,7 +94,7 @@ public final class Main {
                         }
                     }
                     default -> {
-                        ErrorMessage err = ErrorFactory.standardErr();
+                        ErrorMessage err = ErrorMessage.getStdError();
                         output.addPOJO(err);
                     }
                 }
@@ -110,7 +108,11 @@ public final class Main {
                 recommendation = new Notification(Objects
                         .requireNonNullElse(recMovieName, "No recommendation"), "Recommendation");
                 database.getCurrUser().getNotifications().add(recommendation);
-                ErrorMessage err = ErrorFactory.createErr(null, null, database.getCurrUser());
+                ErrorMessage err = new ErrorMessage.Builder()
+                        .error(null)
+                        .currentMoviesList(null)
+                        .currentUser(database.getCurrUser())
+                        .build();
                 output.addPOJO(err);
             }
         }

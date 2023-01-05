@@ -1,11 +1,24 @@
 package factory;
-import visitor.*;
+
+import visitor.Visitor;
+import visitor.VisitorHomeAUTH;
+import visitor.VisitorHomeNAUTH;
+import visitor.VisitorMovies;
+import visitor.VisitorSeeDetails;
+import visitor.VisitorUpgrades;
+
 
 public final class VisitorFactory {
-    public static Visitor createVisitor(String type)
-    {
-        if (type == null || type.isEmpty())
+    /**
+     * Method creates visitor object according to the type given
+     *
+     * @param type type of the visitor to be returned
+     * @return specified type visitor
+     */
+    public static Visitor createVisitor(final String type) {
+        if (type == null || type.isEmpty()) {
             return null;
+        }
         return switch (type) {
             case "HomeAUTH" -> new VisitorHomeAUTH();
             case "HomeNAUTH" -> new VisitorHomeNAUTH();
